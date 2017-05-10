@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="KW5-g6-N0t">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="dUv-EN-EF2">
+            <objects>
+                <navigationController id="KW5-g6-N0t" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="iQA-CI-iI2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="push" id="6yd-Um-sx3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mou-VF-Z65" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-658" y="74"/>
+        </scene>
+        <!--调用系统App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYZ-cn-yzf">
+                                <rect key="frame" x="20" y="84" width="335" height="563"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="s2t-yl-Udg">
+                                    <rect key="frame" x="0.0" y="0.0" width="335" height="563"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="N4R-LC-d7D">
+                                            <rect key="frame" x="0.0" y="0.0" width="335" height="563"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="Ki2-64-AiM">
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f8x-Cw-1M9" customClass="STBaseButton">
+                                                            <rect key="frame" x="0.0" y="0.0" width="66" height="70"/>
+                                                            <color key="backgroundColor" red="0.37010530650000001" green="0.87666283779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <state key="normal" title="访问通讯录">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="fetchUSerPhoneBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IfG-dA-9lj"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e1F-RL-2wg" customClass="STBaseButton">
+                                                            <rect key="frame" x="68" y="0.0" width="93" height="70"/>
+                                                            <color key="backgroundColor" red="0.37010530650000001" green="0.87666283779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <state key="normal" title="自定义邮件发送">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <segue destination="Yyr-wP-OsP" kind="push" id="djj-vd-zTX"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paX-AQ-xeq" customClass="STBaseButton">
+                                                            <rect key="frame" x="163" y="0.0" width="92" height="70"/>
+                                                            <color key="backgroundColor" red="0.37010530650000001" green="0.87666283779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <state key="normal" title="自定义短信发送">
+                                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <segue destination="mgu-Pe-Tcw" kind="push" id="gnE-ci-oX5"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BY2-l2-hV3" customClass="STBaseButton">
+                                                            <rect key="frame" x="257" y="0.0" width="78" height="70"/>
+                                                            <color key="backgroundColor" red="0.37010530650000001" green="0.87666283779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                            <state key="normal" title="系统自带分享">
+                                                                <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2B-gL-3A3">
+                                                    <rect key="frame" x="0.0" y="71" width="335" height="69"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="SMS">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3Et-qc-Kmi"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zbV-Mt-cOe">
+                                                    <rect key="frame" x="0.0" y="141" width="335" height="70"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="MAILTO">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JGO-5C-HjJ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q12-Zv-PyP">
+                                                    <rect key="frame" x="0.0" y="212" width="335" height="69"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="YouTube">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0UF-2f-bJm"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n5-1n-yZN">
+                                                    <rect key="frame" x="0.0" y="282" width="335" height="70"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="FaceTime">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="41U-1h-Rrm"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6t-3m-GIt">
+                                                    <rect key="frame" x="0.0" y="353" width="335" height="69"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Map">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2yU-kT-55H"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLO-kP-lMZ">
+                                                    <rect key="frame" x="0.0" y="423" width="335" height="70"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="iTunes">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G0o-vs-QKk"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pKZ-47-bC9">
+                                                    <rect key="frame" x="0.0" y="494" width="335" height="69"/>
+                                                    <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                    <state key="normal" title="Phone">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonOnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZM0-zb-Cvh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="N4R-LC-d7D" secondAttribute="bottom" id="815-Tw-5iz"/>
+                                        <constraint firstItem="N4R-LC-d7D" firstAttribute="top" secondItem="s2t-yl-Udg" secondAttribute="top" id="9YC-3a-6d1"/>
+                                        <constraint firstItem="N4R-LC-d7D" firstAttribute="leading" secondItem="s2t-yl-Udg" secondAttribute="leading" id="KnK-lc-BcH"/>
+                                        <constraint firstAttribute="trailing" secondItem="N4R-LC-d7D" secondAttribute="trailing" id="XkZ-kG-uAH"/>
+                                    </constraints>
+                                </view>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fYZ-cn-yzf" secondAttribute="bottom" constant="20" id="8Nu-ry-TJ8"/>
+                            <constraint firstAttribute="trailing" secondItem="fYZ-cn-yzf" secondAttribute="trailing" constant="20" id="J46-Jy-DJG"/>
+                            <constraint firstItem="fYZ-cn-yzf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="i8G-hM-H09"/>
+                            <constraint firstItem="fYZ-cn-yzf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="w6J-Xx-5AN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="调用系统App" id="2xT-5M-oSZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86" y="74"/>
+        </scene>
+        <!--自定义邮件发送-->
+        <scene sceneID="jiA-2t-wqk">
+            <objects>
+                <viewController storyboardIdentifier="STSendMailViewController" automaticallyAdjustsScrollViewInsets="NO" id="Yyr-wP-OsP" customClass="STSendMailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KpO-4o-dYS"/>
+                        <viewControllerLayoutGuide type="bottom" id="s39-ie-esk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sQV-pL-5lv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="48" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="MlW-Qr-9Iu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <gestureRecognizers/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="yUz-JT-uBU">
+                                    <rect key="frame" x="0.0" y="470" width="375" height="128"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LDj-wt-dW0">
+                                            <rect key="frame" x="15" y="49" width="345" height="30"/>
+                                            <color key="backgroundColor" red="0.45476495560000002" green="0.79485709999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="eea-aa-lh8"/>
+                                            </constraints>
+                                            <state key="normal" title="发送">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstItem="LDj-wt-dW0" firstAttribute="leading" secondItem="yUz-JT-uBU" secondAttribute="leading" constant="15" id="3eU-1Y-V3H"/>
+                                        <constraint firstItem="LDj-wt-dW0" firstAttribute="centerY" secondItem="yUz-JT-uBU" secondAttribute="centerY" id="BzZ-xv-6iw"/>
+                                        <constraint firstAttribute="trailing" secondItem="LDj-wt-dW0" secondAttribute="trailing" constant="15" id="IzX-Md-y6F"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="STSendMailTitleCell" rowHeight="48" id="pp0-x1-bcy" customClass="STSendMailTitleCell">
+                                        <rect key="frame" x="0.0" y="56" width="375" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pp0-x1-bcy" id="zMi-Eb-1Kn">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="47"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzB-hm-XS5">
+                                                    <rect key="frame" x="200" y="7" width="160" height="35"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <state key="normal" title="添加新的收件人 ㊉">
+                                                        <color key="titleColor" red="0.37010530650000001" green="0.87666283779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="operationButtonOnClick:" destination="pp0-x1-bcy" eventType="touchUpInside" id="7SC-hG-nlo"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSt-Ha-i8h">
+                                                    <rect key="frame" x="15" y="7" width="80" height="34"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <bool key="isElement" value="NO"/>
+                                                    </accessibility>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                                    <state key="normal" title="📮收件人">
+                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="fSt-Ha-i8h" firstAttribute="centerY" secondItem="zMi-Eb-1Kn" secondAttribute="centerY" id="MeO-AN-sTo"/>
+                                                <constraint firstItem="BzB-hm-XS5" firstAttribute="centerY" secondItem="zMi-Eb-1Kn" secondAttribute="centerY" id="Xxc-TM-Kb8"/>
+                                                <constraint firstItem="fSt-Ha-i8h" firstAttribute="leading" secondItem="zMi-Eb-1Kn" secondAttribute="leading" constant="15" id="hIH-pY-6Ku"/>
+                                                <constraint firstAttribute="trailing" secondItem="BzB-hm-XS5" secondAttribute="trailing" constant="15" id="yvF-QQ-9qP"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="iconAndTitleButton" destination="fSt-Ha-i8h" id="DMY-rS-gHY"/>
+                                            <outlet property="operationButton" destination="BzB-hm-XS5" id="B2V-Al-ufc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="STSendMailAddNewAddressCell" rowHeight="58" id="6ft-gQ-KaL" customClass="STSendMailAddNewAddressCell">
+                                        <rect key="frame" x="0.0" y="104" width="375" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6ft-gQ-KaL" id="juQ-YB-NoH">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="请输入邮箱地址" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cVh-Nl-179">
+                                                    <rect key="frame" x="15" y="13" width="345" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="pYm-Q5-uZ5"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="emailAddressEndChange:" destination="6ft-gQ-KaL" eventType="editingDidEnd" id="L0R-Ip-flX"/>
+                                                    </connections>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8iU-Iz-TdK" customClass="STBaseButton">
+                                                    <rect key="frame" x="360" y="14" width="0.0" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="Nqa-zK-HH5"/>
+                                                        <constraint firstAttribute="width" constant="0.01" id="il6-KN-bKQ"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                                    <state key="normal" title="㊀">
+                                                        <color key="titleColor" red="1" green="0.1229600554" blue="0.041136637699999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="deleteButtonOnClick:" destination="6ft-gQ-KaL" eventType="touchUpInside" id="iKe-wE-UJJ"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8iU-Iz-TdK" secondAttribute="trailing" constant="15" id="AmH-mT-FyA"/>
+                                                <constraint firstItem="cVh-Nl-179" firstAttribute="centerY" secondItem="juQ-YB-NoH" secondAttribute="centerY" id="Nm1-HX-EUS"/>
+                                                <constraint firstItem="8iU-Iz-TdK" firstAttribute="leading" secondItem="cVh-Nl-179" secondAttribute="trailing" id="Nzh-u8-VvQ"/>
+                                                <constraint firstItem="cVh-Nl-179" firstAttribute="leading" secondItem="juQ-YB-NoH" secondAttribute="leading" constant="15" id="dls-L6-4Ub"/>
+                                                <constraint firstItem="8iU-Iz-TdK" firstAttribute="centerY" secondItem="juQ-YB-NoH" secondAttribute="centerY" id="lsJ-fO-9nI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="emailAddressTextF" destination="cVh-Nl-179" id="cRS-6T-bnk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="STSendMailSubjectCell" rowHeight="56" id="I1J-we-STq" customClass="STSendMailSubjectCell">
+                                        <rect key="frame" x="0.0" y="162" width="375" height="56"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="I1J-we-STq" id="bhn-Ae-QC7">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="主题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JyM-g6-ULQ">
+                                                    <rect key="frame" x="15" y="13" width="345" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="4D9-Jf-c0v"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="subjectEndChange:" destination="I1J-we-STq" eventType="editingDidEnd" id="Q8G-tE-1Mf"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JyM-g6-ULQ" firstAttribute="centerY" secondItem="bhn-Ae-QC7" secondAttribute="centerY" id="66p-vg-3KZ"/>
+                                                <constraint firstItem="JyM-g6-ULQ" firstAttribute="leading" secondItem="bhn-Ae-QC7" secondAttribute="leading" constant="15" id="BgB-j9-pDQ"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="JyM-g6-ULQ" secondAttribute="trailingMargin" constant="15" id="MEE-r0-OJx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subjectTextF" destination="JyM-g6-ULQ" id="jn0-6w-twv"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="STSendMailContentCell" rowHeight="153" id="hOI-W1-21F" customClass="STSendMailContentCell">
+                                        <rect key="frame" x="0.0" y="218" width="375" height="153"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hOI-W1-21F" id="nux-Oh-AZh">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="152"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bga-xG-thF">
+                                                    <rect key="frame" x="15" y="5" width="345" height="143"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Bga-xG-thF" firstAttribute="top" secondItem="nux-Oh-AZh" secondAttribute="top" constant="5" id="E52-td-a3p"/>
+                                                <constraint firstItem="Bga-xG-thF" firstAttribute="leading" secondItem="nux-Oh-AZh" secondAttribute="leading" constant="15" id="IrK-eb-Tju"/>
+                                                <constraint firstAttribute="trailing" secondItem="Bga-xG-thF" secondAttribute="trailing" constant="15" id="b7v-1q-x4N"/>
+                                                <constraint firstAttribute="bottom" secondItem="Bga-xG-thF" secondAttribute="bottom" constant="5" id="dAY-d1-w19"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contentTextV" destination="Bga-xG-thF" id="hci-la-tic"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="81" id="GCO-Gk-qdi">
+                                        <rect key="frame" x="0.0" y="371" width="375" height="81"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GCO-Gk-qdi" id="ZZR-Q6-aey">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gJr-I5-aXe">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="81"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qb3-do-cJT">
+                                                        <size key="itemSize" width="50" height="50"/>
+                                                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    </collectionViewFlowLayout>
+                                                    <cells>
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hLa-w9-M2q">
+                                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                                <autoresizingMask key="autoresizingMask"/>
+                                                            </view>
+                                                        </collectionViewCell>
+                                                    </cells>
+                                                </collectionView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="gJr-I5-aXe" secondAttribute="bottom" id="Jjo-L0-7Rj"/>
+                                                <constraint firstItem="gJr-I5-aXe" firstAttribute="leading" secondItem="ZZR-Q6-aey" secondAttribute="leading" id="ce1-Ft-F3T"/>
+                                                <constraint firstItem="gJr-I5-aXe" firstAttribute="top" secondItem="ZZR-Q6-aey" secondAttribute="top" id="h2E-Bd-WX3"/>
+                                                <constraint firstAttribute="trailing" secondItem="gJr-I5-aXe" secondAttribute="trailing" id="s1V-tN-ULZ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Yyr-wP-OsP" id="Xor-q1-1nb"/>
+                                    <outlet property="delegate" destination="Yyr-wP-OsP" id="FvH-d9-DMo"/>
+                                    <outletCollection property="gestureRecognizers" destination="ffa-5F-p0h" appends="YES" id="1KL-uB-FV5"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MlW-Qr-9Iu" firstAttribute="top" secondItem="KpO-4o-dYS" secondAttribute="bottom" id="WWt-9U-VOX"/>
+                            <constraint firstAttribute="trailing" secondItem="MlW-Qr-9Iu" secondAttribute="trailing" id="Zd0-eZ-dtV"/>
+                            <constraint firstItem="s39-ie-esk" firstAttribute="top" secondItem="MlW-Qr-9Iu" secondAttribute="bottom" id="tOJ-23-2bi"/>
+                            <constraint firstItem="MlW-Qr-9Iu" firstAttribute="leading" secondItem="sQV-pL-5lv" secondAttribute="leading" id="vGk-YV-Ziv"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="自定义邮件发送" id="KJA-A7-BHC"/>
+                    <connections>
+                        <outlet property="tableView" destination="MlW-Qr-9Iu" id="QdO-xz-JCC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LvY-ag-jCj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ffa-5F-p0h">
+                    <connections>
+                        <action selector="viewBeTap:" destination="Yyr-wP-OsP" id="vMK-Yt-ncR"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="940" y="-304.4977511244378"/>
+        </scene>
+        <!--自定义短信发送-->
+        <scene sceneID="OIe-b9-Ep7">
+            <objects>
+                <viewController storyboardIdentifier="STSendSMSViewController" id="mgu-Pe-Tcw" customClass="STSendSMSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1bU-5b-IZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="7cj-Nh-zj4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JqC-zj-eIU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="主题" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bc2-T6-nLY">
+                                <rect key="frame" x="24" y="134" width="327" height="35"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="subjectChangeEnd:" destination="mgu-Pe-Tcw" eventType="editingDidEnd" id="Rnz-Tb-1k5"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="收件人" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GAg-G4-l0a">
+                                <rect key="frame" x="24" y="84" width="327" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="hMa-uS-LUe"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                <connections>
+                                    <action selector="phoneNumChanegEnd:" destination="mgu-Pe-Tcw" eventType="editingDidEnd" id="riG-M3-hBx"/>
+                                </connections>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fSq-tG-4eX">
+                                <rect key="frame" x="24" y="189" width="327" height="359"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="内容" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2vs-9b-Yfg">
+                                        <rect key="frame" x="0.0" y="0.0" width="327" height="175"/>
+                                        <color key="backgroundColor" red="0.35677456499999999" green="0.81910114950000001" blue="0.82358139750000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textView>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gpb-vi-ekP">
+                                        <rect key="frame" x="0.0" y="185" width="327" height="174"/>
+                                        <color key="backgroundColor" red="0.37010530650000001" green="0.87666283779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="67c-vn-tQA">
+                                            <size key="itemSize" width="118" height="102"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        </collectionViewFlowLayout>
+                                        <cells>
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="STSendSMSImageCollectionViewCell" id="F8T-bZ-h90" customClass="STSendSMSImageCollectionViewCell">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="102"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="118" height="102"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="35i-Aw-zyn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="118" height="102"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                </view>
+                                                <constraints>
+                                                    <constraint firstItem="35i-Aw-zyn" firstAttribute="top" secondItem="F8T-bZ-h90" secondAttribute="top" id="2Bi-wJ-ais"/>
+                                                    <constraint firstAttribute="bottom" secondItem="35i-Aw-zyn" secondAttribute="bottom" id="5af-t5-Aki"/>
+                                                    <constraint firstItem="35i-Aw-zyn" firstAttribute="leading" secondItem="F8T-bZ-h90" secondAttribute="leading" id="8AW-dC-QVz"/>
+                                                    <constraint firstAttribute="trailing" secondItem="35i-Aw-zyn" secondAttribute="trailing" id="Z4n-xH-MMF"/>
+                                                </constraints>
+                                            </collectionViewCell>
+                                        </cells>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="mgu-Pe-Tcw" id="uBq-Lz-bOM"/>
+                                            <outlet property="delegate" destination="mgu-Pe-Tcw" id="DzU-rf-gOC"/>
+                                        </connections>
+                                    </collectionView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUW-Nk-9Fw">
+                                <rect key="frame" x="24" y="558" width="327" height="45"/>
+                                <color key="backgroundColor" red="0.45476495560000002" green="0.79485709999999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="IaK-Uj-cRz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="发送">
+                                    <color key="titleColor" red="0.98031002280000001" green="0.98059839010000005" blue="0.97210830449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="sendSMSOnClick:" destination="mgu-Pe-Tcw" eventType="touchUpInside" id="VKK-w5-hcf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fSq-tG-4eX" firstAttribute="trailing" secondItem="GAg-G4-l0a" secondAttribute="trailing" id="16J-52-pgx"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GAg-G4-l0a" secondAttribute="trailing" constant="8" id="3vK-7E-ZmF"/>
+                            <constraint firstItem="bc2-T6-nLY" firstAttribute="top" secondItem="GAg-G4-l0a" secondAttribute="bottom" constant="15" id="5Xe-m7-OZp"/>
+                            <constraint firstItem="KUW-Nk-9Fw" firstAttribute="trailing" secondItem="GAg-G4-l0a" secondAttribute="trailing" id="66v-Wi-HOc"/>
+                            <constraint firstItem="fSq-tG-4eX" firstAttribute="leading" secondItem="GAg-G4-l0a" secondAttribute="leading" id="9R8-yF-ghW"/>
+                            <constraint firstItem="GAg-G4-l0a" firstAttribute="top" secondItem="1bU-5b-IZr" secondAttribute="bottom" constant="20" id="PYv-Yu-TxB"/>
+                            <constraint firstItem="7cj-Nh-zj4" firstAttribute="top" secondItem="KUW-Nk-9Fw" secondAttribute="bottom" constant="20" id="R6O-6T-ayQ"/>
+                            <constraint firstItem="bc2-T6-nLY" firstAttribute="leading" secondItem="GAg-G4-l0a" secondAttribute="leading" id="Tlj-rx-aiu"/>
+                            <constraint firstItem="KUW-Nk-9Fw" firstAttribute="top" secondItem="fSq-tG-4eX" secondAttribute="bottom" constant="10" id="WRe-RJ-ovi"/>
+                            <constraint firstItem="bc2-T6-nLY" firstAttribute="height" secondItem="GAg-G4-l0a" secondAttribute="height" id="WWS-CC-5YJ"/>
+                            <constraint firstItem="fSq-tG-4eX" firstAttribute="top" secondItem="bc2-T6-nLY" secondAttribute="bottom" constant="20" id="fgh-yd-YR8"/>
+                            <constraint firstItem="bc2-T6-nLY" firstAttribute="width" secondItem="GAg-G4-l0a" secondAttribute="width" id="hX7-sf-fdh"/>
+                            <constraint firstItem="GAg-G4-l0a" firstAttribute="leading" secondItem="JqC-zj-eIU" secondAttribute="leadingMargin" constant="8" id="huK-EH-jae"/>
+                            <constraint firstItem="KUW-Nk-9Fw" firstAttribute="leading" secondItem="GAg-G4-l0a" secondAttribute="leading" id="tN4-1z-mo7"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Pmx-zR-hMP" appends="YES" id="SrT-tY-eSA"/>
+                        </connections>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="自定义短信发送" id="e9L-rS-asz"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="Gpb-vi-ekP" id="gWi-ck-gDX"/>
+                        <outlet property="contentTextV" destination="2vs-9b-Yfg" id="DbY-wM-dLT"/>
+                        <outlet property="phoneNumTextf" destination="GAg-G4-l0a" id="JK4-xk-0t8"/>
+                        <outlet property="subjecTextF" destination="bc2-T6-nLY" id="0wb-dN-XNE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33X-HX-WYc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Pmx-zR-hMP">
+                    <connections>
+                        <action selector="tapOnClick:" destination="mgu-Pe-Tcw" id="haI-lD-YHo"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="940" y="399"/>
+        </scene>
+    </scenes>
+</document>
