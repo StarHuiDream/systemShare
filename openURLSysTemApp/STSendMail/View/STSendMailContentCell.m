@@ -7,6 +7,7 @@
 //
 
 #import "STSendMailContentCell.h"
+#import "STSendMailModel.h"
 
 @interface  STSendMailContentCell()
 <
@@ -17,16 +18,20 @@ UITextViewDelegate
 
 @property (weak, nonatomic) id<STSendMailContentCellDelegate> delegate;
 
+@property (strong, nonatomic) STSendMailModel *mailModel;
+
 @end
 
 @implementation STSendMailContentCell
 
 + (instancetype) instanceWithtableView:(UITableView *) tableView
-                              delegate:(id<STSendMailContentCellDelegate>) delegate{
+                              delegate:(id<STSendMailContentCellDelegate>) delegate
+                             mailModel:(STSendMailModel *)mailModel {
 
     STSendMailContentCell *cell = [STSendMailContentCell stbaseCellInstanceWithTableView:tableView];
     cell.delegate               = delegate;
     cell.contentTextV.delegate  = cell;
+    cell.mailModel              = mailModel;
     return cell;
 }
 
@@ -41,16 +46,12 @@ UITextViewDelegate
     return self;
 }
 
-- (void) layoutSubviews{
+#pragma -mark UITextViewDelegate
+- (void)textViewDidEndEditing:(UITextView *)textView{
+    
+    self.mailModel.mailContentStr = textView.text;
 
-    [super layoutSubviews];
-    
-//    self.contentTextV.layer.borderColor = [UIColor grayColor].CGColor;
-//    self.contentTextV.layer.borderWidth = 1.0f;
-//    self.contentTextV.layer.cornerRadius = 5.0f;
-    
 }
-
 
 
 @end

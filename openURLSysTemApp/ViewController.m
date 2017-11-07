@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "SocialShareViewController.h"
 
 @interface ViewController ()
 
@@ -113,6 +114,10 @@
 - (IBAction)fetchUSerPhoneBook:(id)sender {
     
     
+}
+- (IBAction)share:(id)sender {
+    SocialShareViewController *vc = [[SocialShareViewController alloc] init];
+    [self.navigationController pushViewController:vc  animated:YES];
 }
 
 

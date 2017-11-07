@@ -7,6 +7,7 @@
 //
 
 #import "STSendMailSubjectCell.h"
+#import "STSendMailModel.h"
 
 @interface STSendMailSubjectCell()
 
@@ -14,20 +15,25 @@
 
 @property (weak, nonatomic) id<STSendMailSubjectCellDelegate> delegate;
 
+@property (strong, nonatomic) STSendMailModel *mailModel;
+
 @end
 
 @implementation STSendMailSubjectCell
 
 + (instancetype) instanceWithtableView:(UITableView *) tableView
-                              delegate:(id<STSendMailSubjectCellDelegate>) delegate{
+                              delegate:(id<STSendMailSubjectCellDelegate>) delegate
+                             mailModel:(STSendMailModel *)mailModel{
 
     STSendMailSubjectCell *cell = [STSendMailSubjectCell stbaseCellInstanceWithTableView:tableView];
     cell.delegate               = delegate;
+    cell.mailModel              = mailModel;
     return cell;
 }
 
-- (IBAction)subjectEndChange:(id)sender {
+- (IBAction)subjectEndChange:(UITextField *)sender {
     
+    self.mailModel.mailSubjectStr = sender.text;
 }
 
 @end

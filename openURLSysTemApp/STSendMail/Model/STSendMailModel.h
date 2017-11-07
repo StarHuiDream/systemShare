@@ -33,12 +33,14 @@ typedef NS_ENUM(NSInteger,STSendMailAddRessType) {
 
 @interface STSendMailModel : STBaseModel
 
-/** 收件人 */
-@property (strong, nonatomic) STSendMailAddRessModel *mailRecipient;
-/** 抄送 */
-@property (strong, nonatomic) STSendMailAddRessModel *mailCc;
-/** 密送送 */
-@property (strong, nonatomic) STSendMailAddRessModel *mailBcc;
+/** 收件人、抄送、密送 */
+@property (copy, nonatomic) NSArray<STSendMailAddRessModel *> *mailArr;
+///** 收件人 */
+//@property (strong, nonatomic) STSendMailAddRessModel *mailRecipient;
+///** 抄送 */
+//@property (strong, nonatomic) STSendMailAddRessModel *mailCc;
+///** 密送送 */
+//@property (strong, nonatomic) STSendMailAddRessModel *mailBcc;
 /** 邮件主题 */
 @property (copy, nonatomic) NSString *mailSubjectStr;
 /** 邮件内容 */

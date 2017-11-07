@@ -7,6 +7,7 @@
 //
 
 #import "STBaseCell.h"
+@class STSendMailModel;
 
 @protocol STSendMailContentCellDelegate <NSObject>
 
@@ -17,6 +18,7 @@
 @interface STSendMailContentCell : STBaseCell
 
 + (instancetype) instanceWithtableView:(UITableView *) tableView
-                              delegate:(id<STSendMailContentCellDelegate>) delegate;
+                              delegate:(id<STSendMailContentCellDelegate>) delegate
+                             mailModel:(STSendMailModel *)mailModel;
 
 @end

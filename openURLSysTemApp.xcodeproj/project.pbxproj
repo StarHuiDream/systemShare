@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A253A25D1FB1602B00F03BE1 /* SocialShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A253A25C1FB1602B00F03BE1 /* SocialShareViewController.m */; };
 		A2E63C651EC04F9A0043663B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E63C641EC04F9A0043663B /* main.m */; };
 		A2E63C681EC04F9A0043663B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E63C671EC04F9A0043663B /* AppDelegate.m */; };
 		A2E63C6B1EC04F9A0043663B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2E63C6A1EC04F9A0043663B /* ViewController.m */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A253A25B1FB1602B00F03BE1 /* SocialShareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SocialShareViewController.h; sourceTree = "<group>"; };
+		A253A25C1FB1602B00F03BE1 /* SocialShareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SocialShareViewController.m; sourceTree = "<group>"; };
 		A2E63C601EC04F9A0043663B /* openURLSysTemApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = openURLSysTemApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2E63C641EC04F9A0043663B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A2E63C661EC04F9A0043663B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +117,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A253A2571FB15FE100F03BE1 /* socialShare */ = {
+			isa = PBXGroup;
+			children = (
+				A253A2581FB15FE100F03BE1 /* Controller */,
+				A253A2591FB15FE100F03BE1 /* Model */,
+				A253A25A1FB15FE100F03BE1 /* View */,
+			);
+			path = socialShare;
+			sourceTree = "<group>";
+		};
+		A253A2581FB15FE100F03BE1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A253A25B1FB1602B00F03BE1 /* SocialShareViewController.h */,
+				A253A25C1FB1602B00F03BE1 /* SocialShareViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A253A2591FB15FE100F03BE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A253A25A1FB15FE100F03BE1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A2E63C571EC04F9A0043663B = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +173,7 @@
 		A2E63C621EC04F9A0043663B /* openURLSysTemApp */ = {
 			isa = PBXGroup;
 			children = (
+				A253A2571FB15FE100F03BE1 /* socialShare */,
 				A2E63CC31EC2A3410043663B /* Home */,
 				A2E63CAD1EC199A40043663B /* Base */,
 				A2E63C9D1EC0BE6E0043663B /* STSendSMS */,
@@ -443,6 +480,7 @@
 				A2E63CC21EC1BB090043663B /* STSendMailContentCell.m in Sources */,
 				A2E63C6B1EC04F9A0043663B /* ViewController.m in Sources */,
 				A2E63C681EC04F9A0043663B /* AppDelegate.m in Sources */,
+				A253A25D1FB1602B00F03BE1 /* SocialShareViewController.m in Sources */,
 				A2E63CA91EC190770043663B /* STSendMailViewController.m in Sources */,
 				A2E63CB61EC19B820043663B /* STSendMailAddNewAddressCell.m in Sources */,
 				A2E63C651EC04F9A0043663B /* main.m in Sources */,

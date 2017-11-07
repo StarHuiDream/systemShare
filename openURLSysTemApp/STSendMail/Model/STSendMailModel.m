@@ -20,8 +20,7 @@
     switch (addressType) {
         case STSendMailAddRessRecipientType:
             self.titeStr = @"📮 收件人";
-            [mailMutArr addObject:@""];
-            [mailMutArr addObject:@""];
+//            [mailMutArr addObject:@""];
             break;
         case STSendMailAddRessCcType:
             
@@ -34,6 +33,7 @@
         default:
             break;
     }
+    [mailMutArr addObject:@""];
     self.mailAddressMutArr                   = mailMutArr;
 }
 
@@ -45,15 +45,22 @@
     
     STSendMailModel        *mailModel        = [[STSendMailModel alloc] init];
     STSendMailAddRessModel *mailAddressModel = [[STSendMailAddRessModel alloc] init];
+    NSMutableArray         *tmepMutArr       = [NSMutableArray array];
     
     mailAddressModel.addressType             = STSendMailAddRessRecipientType;
-    mailModel.mailRecipient                  = [mailAddressModel deepCopyAllPropertyValue];
+    [tmepMutArr addObject:[mailAddressModel deepCopyAllPropertyValue]];
+//    mailModel.mailRecipient                  = [mailAddressModel deepCopyAllPropertyValue];
     
     mailAddressModel.addressType             = STSendMailAddRessCcType;
-    mailModel.mailCc                         = [mailAddressModel deepCopyAllPropertyValue];
+//    mailModel.mailCc                         = [mailAddressModel deepCopyAllPropertyValue];
+     [tmepMutArr addObject:[mailAddressModel deepCopyAllPropertyValue]];
     
     mailAddressModel.addressType             = STSendMailAddRessBCcType;
-    mailModel.mailBcc                        = [mailAddressModel deepCopyAllPropertyValue];
+//    mailModel.mailBcc                        = [mailAddressModel deepCopyAllPropertyValue];
+     [tmepMutArr addObject:[mailAddressModel deepCopyAllPropertyValue]];
+    
+    
+    mailModel.mailArr = [tmepMutArr copy];
     
     return mailModel;
 }
