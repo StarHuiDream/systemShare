@@ -46,13 +46,17 @@ static NSString *cellIdentifer = @"cellIdentiferKey";
     return self.titlesArr.count;
 }
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifer];
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
     }
-    
     ShareTypeModel *model = self.titlesArr[indexPath.row];
     cell.textLabel.text = model.title;
     return cell;
